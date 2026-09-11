@@ -22,22 +22,22 @@ A database planning exercise from my web dev course
 
 ## Car Schema
 
-- id: int PK auto unsigned
-- brand: varchar(100) indexed
-- model: varchar(100) indexed
-- year: year
-- price: decimal
-- mileage: int unsigned
-- fuel: varchar(50)
-- transmission: varchar(50)
-- power_kw: smallint unsigned
-- color: varchar(50)
-- doors: tinyint unsigned
-- description: text nullable
-- license_plate: varchar(20) unique nullable
-- vin: char(17) unique
-- available: boolean default:true
-- created_at: timestamp
-- updated_at: timestamp
-
-> Note: Columns are NOT NULL unless marked `nullable`
+| Column          | Type                | Allows NULL | Index type  | Attributes       |
+| :-------------- | :------------------ | :---------: | :---------- | :--------------- |
+| `id`            | `INT UNSIGNED`      |      -      | Primary key | `AUTO_INCREMENT` |
+| `brand`         | `VARCHAR(100)`      |      -      | Index       | -                |
+| `model`         | `VARCHAR(100)`      |      -      | Index       | -                |
+| `year`          | `YEAR`              |      -      | -           | -                |
+| `price`         | `DECIMAL(8, 2)`     |      -      | -           | -                |
+| `mileage`       | `INT UNSIGNED`      |      -      | -           | -                |
+| `fuel`          | `VARCHAR(50)`       |      -      | -           | -                |
+| `transmission`  | `VARCHAR(50)`       |      -      | -           | -                |
+| `power_kw`      | `SMALLINT UNSIGNED` |      -      | -           | -                |
+| `color`         | `VARCHAR(50)`       |      -      | -           | -                |
+| `doors`         | `TINYINT UNSIGNED`  |      -      | -           | -                |
+| `description`   | `TEXT`              |     Yes     | -           | -                |
+| `license_plate` | `VARCHAR(20)`       |     Yes     | Unique key  | -                |
+| `vin`           | `CHAR(17)`          |      -      | Unique key  | -                |
+| `available`     | `BOOLEAN`           |      -      | -           | `DEFAULT 1`      |
+| `created_at`    | `TIMESTAMP`         |      -      | -           | -                |
+| `updated_at`    | `TIMESTAMP`         |      -      | -           | -                |
