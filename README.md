@@ -1,6 +1,6 @@
-# Database planning
+# Database schema planning
 
-A database planning exercise from my web dev course
+A database schema planning exercise from my web dev course
 
 ## Exercise
 
